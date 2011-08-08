@@ -15,6 +15,11 @@
 # Directly accesses input devices, so must be run as root
 #   e.g. sudo keyboarddetector.py
 
+# Update by Ian Ozsvald, August 2011
+# Script originally from: https://bugs.launchpad.net/ubuntu/+source/linux/+bug/606238/comments/41
+# This update fixes two OSError exceptions and adds a 'close' call (which stops one of the exceptions)
+# Related docs here: http://ianozsvald.com/2011/08/02/dell-e6420-with-ubuntu-10-10-maverick-meerkat-32-bit/
+
 import os, sys, signal, subprocess, struct, ctypes, re
 
 # Key codes that should not disable the trackpoint since they may be
