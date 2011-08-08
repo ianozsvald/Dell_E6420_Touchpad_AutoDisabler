@@ -1,0 +1,7 @@
+This tool automatically disables the Dell E6420 touchpad (using Ubuntu 10.10) when the user types, reactivating the touchpad a fraction of a second later. This stops the user from accidently clicking the touchpad with the base of their hand whilst typing.
+
+This is a refinement of Philip Aston's keyboardetector.py from https://bugs.launchpad.net/ubuntu/+source/linux/+bug/606238/comments/41
+
+There are two refinements, the first catches a "[Errno 4] Interrupted system call", the second catches "OSError: [Errno 24] Too many open files: '/dev/input/event4'". These are minor improvements that enable the script to run indefinately.
+
+My E6420 has the NVIDIA NVS 4200M second graphics card, this seems to produce different results from other machines (based on my scanning of discussion threads) that lack the second graphics card.
